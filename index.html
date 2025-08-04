@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noushiya A | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Animated Matrix-like Background */
+    body {
+      background: #0a0f1c;
+      color: #e2e8f0;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 255, 0, 0.1) 0px,
+        rgba(0, 255, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+      animation: scrollLines 8s linear infinite;
+      z-index: -1;
+    }
+    @keyframes scrollLines {
+      from { background-position: 0 0; }
+      to { background-position: 0 100%; }
+    }
+
+    /* Neon Text and Hover */
+    .neon-text {
+      text-shadow: 0 0 8px #0ff, 0 0 16px #0ff,;
+    }
+    .neon-btn {
+      box-shadow: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .neon-btn:hover {
+      transform: scale(1.5);
+      box-shadow: 0 0 12px #0ff, 0 0 24px #0ff;
+    }
+
+    
+    section h2.neon-text {
+        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;}
+
+    /* Fade-in Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="font-mono">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full bg-black bg-opacity-70 backdrop-blur-sm shadow-lg z-50 border-b border-green-400">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4 text-green-400">
+      <h1 class="text-2xl font-bold neon-text">Noushiya A</h1>
+      <nav class="space-x-6">
+        <a href="#about" class="hover:text-green-200">About</a>
+        <a href="#skills" class="hover:text-green-200">Skills</a>
+        <a href="#projects" class="hover:text-green-200">Projects</a>
+        <a href="#contact" class="hover:text-green-200">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center">
+    <h2 class="text-5xl font-bold mb-4 fade-in neon-text">Hey,<BR>
+        I’m Noushiya</h2>
+    <p class="text-xl mb-6 fade-in text-green-300">QA Tester | Front End Dev | Tech Enthusiast</p>
+    <a href="#projects" class="bg-green-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-400 fade-in neon-btn">See My Work</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 max-w-5xl mx-auto text-center fade-in">
+    <h3 class="text-3xl font-bold mb-6 neon-text">About Me</h3>
+    <p class="text-lg text-green-200 leading-relaxed">
+        I’m a passionate Web Developer with a knack for creativity and exploration. 
+        I have a strong sense of design and aesthetics.
+        Curiosity fuels my journey — I love trying different things, 
+        from web development to QA testing.
+        I embrace being a beginner, constantly learning and improving, 
+        whether it’s mastering a new framework, experimenting with prompts, 
+        or diving into unfamiliar challenges. My creative mindset and openness 
+        to new ideas define my approach to building and testing products that truly stand out.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-black bg-opacity-50 fade-in">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6 neon-text">Skills</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-lg">
+        <div class="bg-black p-6 rounded-xl shadow neon-btn">HTML</div>
+        <div class="bg-black p-6 rounded-xl shadow neon-btn">CSS</div>
+        <div class="bg-black p-6 rounded-xl shadow neon-btn">JAVA SCRIPT</div>
+        <div class="bg-black p-6 rounded-xl shadow neon-btn">SQL</div>
+        <div class="bg-black p-6 rounded-xl shadow neon-btn">GIT & GITHUB</div>
+        <div class="bg-black p-6 rounded-xl shadow neon-btn">TESTING</div>
+        <div class="bg-black p-6 rounded-xl shadow neon-btn">TEST CASE WRITING</div>
+        <div class="bg-black p-6 rounded-xl shadow neon-btn">C</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 max-w-6xl mx-auto fade-in">
+    <h3 class="text-3xl font-bold text-center mb-12 neon-text">Projects</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-black rounded-xl shadow hover:shadow-lg transition p-4 border border-green-500">
+        <h4 class="text-xl font-bold mb-2 text-green-300">LET'S GO</h4>
+        <p class="text-green-200 text-sm">A vibrant platform for explorers and eco-lovers, 
+            uncovering hidden travel spots while leading green 
+            campaigns that inspire people to protect and preserve nature.</p>
+      </div>
+      <div class="bg-black rounded-xl shadow hover:shadow-lg transition p-4 border border-green-500">
+        <h4 class="text-xl font-bold mb-2 text-green-300">To-Do List Web App</h4>
+        <p class="text-green-200 text-sm">A simple yet efficient task management web application built 
+            using HTML, CSS, and JavaScript. This app allows users to add, mark as complete, and delete tasks, 
+            while also saving tasks in localStorage for persistent data storage even after refreshing the page.</p>
+      </div>
+      <div class="bg-black rounded-xl shadow hover:shadow-lg transition p-4 border border-green-500">
+        <h4 class="text-xl font-bold mb-2 text-green-300">TRAVEL WEBSITE</h4>
+        <p class="text-green-200 text-sm">Developed the frontend of a responsive travel website with a strong 
+            focus on user experience and seamless service discovery. Designed intuitive layouts and interactive 
+            features using HTML, CSS, and JavaScript</p>
+      </div>
+      <div class="bg-black rounded-xl shadow hover:shadow-lg transition p-4 border border-green-500">
+        <h4 class="text-xl font-bold mb-2 text-green-300">GAMES</h4>
+        <p class="text-green-200 text-sm">Developed a set of educational and engaging games — including Flappy Bird, 
+            Memory Matching Game, and Number Prediction Game — for Rahmaniya School students with disabilities. Focused 
+            on creating an inclusive and accessible gaming experience to support both learning and entertainment. 
+            Completed the project in just one hour using prompt engineering techniques.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Download Section -->
+  <section class="py-20 max-w-5xl mx-auto text-center fade-in">
+    <h3 class="text-3xl font-bold mb-6 neon-text">Want to Know More?</h3>
+    <p class="text-lg text-green-200 mb-6">Download my resume to learn more about my experience and skills.</p>
+    <a href="Noushiya_A_R (2).pdf" download class="bg-green-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-400 neon-btn">Download Resume</a>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-black bg-opacity-50 text-center fade-in">
+    <h3 class="text-3xl font-bold mb-6 neon-text">Contact Me</h3>
+    <p class="text-lg mb-8 text-green-200">Want to collaborate or have an idea? Let's connect!</p>
+    <div class="flex justify-center space-x-6 mb-6">
+      <a href="mailto:noushhiiinoushhiii70@gmail.com?subject=Collaboration%20Inquiry&body=Hi%20Noushiya," 
+        class="bg-green-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-400 neon-btn">
+        Email
+      </a>
+     
+      <a href="https://www.linkedin.com/in/noushiyaa3/" target="_blank" class="bg-green-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-400 neon-btn">LinkedIn</a>
+      <a href="https://github.com/Noushhiii" target="_blank" class="bg-green-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-400 neon-btn">GitHub</a>
+    </div>
+  </section>
+
+  <script>
+    // Fade-in on scroll
+    const elements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    elements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
