@@ -40,20 +40,20 @@
 
     /* Neon Text and Hover */
     .neon-text {
-      text-shadow: 0 0 8px #0ff, 0 0 16px #0ff,;
+      text-shadow: 0 0 8px #0ff, 0 0 16px #0ff;
     }
     .neon-btn {
       box-shadow: none;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .neon-btn:hover {
-      transform: scale(1.5);
+      transform: scale(1.05);
       box-shadow: 0 0 12px #0ff, 0 0 24px #0ff;
     }
 
-    
     section h2.neon-text {
-        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;}
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+    }
 
     /* Fade-in Animation */
     .fade-in {
@@ -70,22 +70,40 @@
 <body class="font-mono">
 
   <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full bg-black bg-opacity-70 backdrop-blur-sm shadow-lg z-50 border-b border-green-400">
+  <header class="fixed top-0 left-0 w-full bg-black bg-opacity-70 backdrop-blur-sm shadow-lg z-50 border-b border-green-400 transition duration-300">
     <div class="max-w-6xl mx-auto flex justify-between items-center p-4 text-green-400">
+      <!-- Logo -->
       <h1 class="text-2xl font-bold neon-text">Noushiya A</h1>
-      <nav class="space-x-6">
-        <a href="#about" class="hover:text-green-200">About</a>
-        <a href="#skills" class="hover:text-green-200">Skills</a>
-        <a href="#projects" class="hover:text-green-200">Projects</a>
-        <a href="#contact" class="hover:text-green-200">Contact</a>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="menu-btn" class="block md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Nav Links -->
+      <nav id="menu" class="hidden md:flex space-x-6">
+        <a href="#about" class="hover:text-green-200 block py-2 md:py-0">About</a>
+        <a href="#skills" class="hover:text-green-200 block py-2 md:py-0">Skills</a>
+        <a href="#projects" class="hover:text-green-200 block py-2 md:py-0">Projects</a>
+        <a href="#contact" class="hover:text-green-200 block py-2 md:py-0">Contact</a>
       </nav>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center bg-black bg-opacity-90 text-green-400 border-t border-green-400">
+      <a href="#about" class="py-3 w-full text-center hover:bg-green-500 hover:text-black">About</a>
+      <a href="#skills" class="py-3 w-full text-center hover:bg-green-500 hover:text-black">Skills</a>
+      <a href="#projects" class="py-3 w-full text-center hover:bg-green-500 hover:text-black">Projects</a>
+      <a href="#contact" class="py-3 w-full text-center hover:bg-green-500 hover:text-black">Contact</a>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="h-screen flex flex-col justify-center items-center text-center">
-    <h2 class="text-5xl font-bold mb-4 fade-in neon-text">Hey,<BR>
-        I’m Noushiya</h2>
+    <h2 class="text-5xl font-bold mb-4 fade-in neon-text">Hey,<br>I’m Noushiya</h2>
     <p class="text-xl mb-6 fade-in text-green-300">QA Tester | Front End Dev | Tech Enthusiast</p>
     <a href="#projects" class="bg-green-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-400 fade-in neon-btn">See My Work</a>
   </section>
@@ -94,14 +112,14 @@
   <section id="about" class="py-20 max-w-5xl mx-auto text-center fade-in">
     <h3 class="text-3xl font-bold mb-6 neon-text">About Me</h3>
     <p class="text-lg text-green-200 leading-relaxed">
-        I’m a passionate Web Developer with a knack for creativity and exploration. 
-        I have a strong sense of design and aesthetics.
-        Curiosity fuels my journey — I love trying different things, 
-        from web development to QA testing.
-        I embrace being a beginner, constantly learning and improving, 
-        whether it’s mastering a new framework, experimenting with prompts, 
-        or diving into unfamiliar challenges. My creative mindset and openness 
-        to new ideas define my approach to building and testing products that truly stand out.
+      I’m a passionate Web Developer with a knack for creativity and exploration. 
+      I have a strong sense of design and aesthetics.
+      Curiosity fuels my journey — I love trying different things, 
+      from web development to QA testing.
+      I embrace being a beginner, constantly learning and improving, 
+      whether it’s mastering a new framework, experimenting with prompts, 
+      or diving into unfamiliar challenges. My creative mindset and openness 
+      to new ideas define my approach to building and testing products that truly stand out.
     </p>
   </section>
 
@@ -129,27 +147,27 @@
       <div class="bg-black rounded-xl shadow hover:shadow-lg transition p-4 border border-green-500">
         <h4 class="text-xl font-bold mb-2 text-green-300">LET'S GO</h4>
         <p class="text-green-200 text-sm">A vibrant platform for explorers and eco-lovers, 
-            uncovering hidden travel spots while leading green 
-            campaigns that inspire people to protect and preserve nature.</p>
+          uncovering hidden travel spots while leading green 
+          campaigns that inspire people to protect and preserve nature.</p>
       </div>
       <div class="bg-black rounded-xl shadow hover:shadow-lg transition p-4 border border-green-500">
         <h4 class="text-xl font-bold mb-2 text-green-300">To-Do List Web App</h4>
         <p class="text-green-200 text-sm">A simple yet efficient task management web application built 
-            using HTML, CSS, and JavaScript. This app allows users to add, mark as complete, and delete tasks, 
-            while also saving tasks in localStorage for persistent data storage even after refreshing the page.</p>
+          using HTML, CSS, and JavaScript. This app allows users to add, mark as complete, and delete tasks, 
+          while also saving tasks in localStorage for persistent data storage even after refreshing the page.</p>
       </div>
       <div class="bg-black rounded-xl shadow hover:shadow-lg transition p-4 border border-green-500">
         <h4 class="text-xl font-bold mb-2 text-green-300">TRAVEL WEBSITE</h4>
         <p class="text-green-200 text-sm">Developed the frontend of a responsive travel website with a strong 
-            focus on user experience and seamless service discovery. Designed intuitive layouts and interactive 
-            features using HTML, CSS, and JavaScript</p>
+          focus on user experience and seamless service discovery. Designed intuitive layouts and interactive 
+          features using HTML, CSS, and JavaScript</p>
       </div>
       <div class="bg-black rounded-xl shadow hover:shadow-lg transition p-4 border border-green-500">
         <h4 class="text-xl font-bold mb-2 text-green-300">GAMES</h4>
         <p class="text-green-200 text-sm">Developed a set of educational and engaging games — including Flappy Bird, 
-            Memory Matching Game, and Number Prediction Game — for Rahmaniya School students with disabilities. Focused 
-            on creating an inclusive and accessible gaming experience to support both learning and entertainment. 
-            Completed the project in just one hour using prompt engineering techniques.</p>
+          Memory Matching Game, and Number Prediction Game — for Rahmaniya School students with disabilities. Focused 
+          on creating an inclusive and accessible gaming experience to support both learning and entertainment. 
+          Completed the project in just one hour using prompt engineering techniques.</p>
       </div>
     </div>
   </section>
@@ -170,7 +188,6 @@
         class="bg-green-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-400 neon-btn">
         Email
       </a>
-     
       <a href="https://www.linkedin.com/in/noushiyaa3/" target="_blank" class="bg-green-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-400 neon-btn">LinkedIn</a>
       <a href="https://github.com/Noushhiii" target="_blank" class="bg-green-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-400 neon-btn">GitHub</a>
     </div>
@@ -187,6 +204,23 @@
       });
     }, { threshold: 0.2 });
     elements.forEach(el => observer.observe(el));
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Add glow on scroll
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('shadow-2xl', 'border-green-300');
+      } else {
+        header.classList.remove('shadow-2xl', 'border-green-300');
+      }
+    });
   </script>
 
 </body>
